@@ -1,0 +1,267 @@
+:root{
+    --clr: rgb(14, 1, 1);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: armenian;
+    font-family:"Reggae One","Philosopher","Playfair Display",'Times New Roman', Times, serif;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgb(234, 121, 121);
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 70px;
+}
+
+header nav a{
+    color: var(--clr);
+    font-size: 20px;
+    padding:5px 15px;
+    border-radius: 30px;
+}
+
+#home{
+    color: var(--clr);
+    height: 100vh;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 40px;
+    gap: 20px;
+}
+
+#home :nth-child(2)
+{
+    font-family: "Londrina Outline";
+}
+
+#home .btn{
+    background-color: var(--clr);
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: rgb(223, 206, 12);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px 0 20px 0;
+    transition: 0.2s all;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+#about{
+    padding: 30px 50px;
+    font-size: 20px;
+}
+
+.about_flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+.image img{
+    width: 300px;
+}
+
+#about h1, #skills h1, #projects h1, #contact h1{
+    text-align: center;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    font-size: 4rem;
+    padding-top: 30px;
+}
+
+@media (max-width:870px){
+    #home{
+        font-size: 2rem;
+    }
+    .about_flex{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:810px)
+{
+    #about h1, #skills h1, #projects h1, #contact h1{
+        font-size: 3rem;
+    }
+    #skills .card{
+        align-items: left;
+    }
+    #home{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:660px)
+{
+    #about h1, #skills h1, #projects h1, #contact h1{
+        font-size: 2rem;
+    }
+    #home{
+        font-size: 1.5rem;
+    }
+    p,a{
+        font-size: 16px;
+    }
+    header nav a{
+        font-size: 16px;
+    }
+    #projects h2{
+        font-size: 1.2rem;
+    }
+}
+
+.icon{
+    display: none;
+    background-color: white
+}
+
+nav a:hover{
+    background-color: var(--clr);
+    color: white;
+}
+
+@media (max-width:500px) {
+    nav a{
+        display: none;
+    }
+    header{
+        background-color: transparent;
+    }
+    .icon{
+        display: inline-block;
+        width: 100%;
+        font-size: 25px;
+        text-align: end;
+        padding-right: 20px;
+    }
+    nav.active a{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    nav.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: auto;
+    padding: 10px;
+    background-color: rgb(230, 14, 14);
+    }
+}
+
+
+#skills{
+    padding: 30px 50px;
+    font-size: 30px;
+}
+
+.skills_container .out{
+    width: 500px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #101521;
+}
+
+.skills_container .out .in{
+    border-radius: 20px;
+    height: 100%;
+    background-color: #e5e510;
+}
+
+#skills .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px auto;
+}
+
+#skills .card p{
+    width: 200px;
+}
+
+#projects{
+    padding: 30px 50px;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+#projects .project_card{
+    line-height: 30px;
+}
+
+#projects .links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.project_card{
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+.project_card a{
+    color: white;
+    background-color: var(--clr);
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 30px;
+}
+
+.project_card .project_flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+#contact{
+    padding: 30px 50px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--clr);
+}
+
+#contact i{
+    font-size: 30px;
+    margin: 10px;
+    color: var(--clr);
+}
+
+footer{
+    padding: 30px;
+    text-align: center;
+    line-height: 2em;
+    font-size: 20px;
+}
